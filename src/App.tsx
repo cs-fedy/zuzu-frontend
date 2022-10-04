@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import AppProvider from "./contexts/AppContext";
 import { Auth, Home, ResetPassword, SignIn, SignUp } from "./pages";
 
@@ -18,9 +18,9 @@ function App() {
 
 function WrappedApp() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
