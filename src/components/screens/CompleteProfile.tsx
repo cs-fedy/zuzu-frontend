@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useApp } from "../../contexts/AppContext";
 import GenderStep from "./GenderStep";
 import InterestStep from "./InterestStep";
@@ -9,12 +8,10 @@ import SetupFingerprintStep from "./SetupFingerprintStep";
 import Stepper from "../Stepper";
 
 function CompleteProfileScreen() {
-  const navigate = useNavigate();
   const app = useApp();
 
   const handleFinalStep = () => {
-    app.completeAccount();
-    setTimeout(() => navigate("/"), 2000);
+    setTimeout(() => app.completeAccount(), 2000);
   };
 
   const steps = [

@@ -4,15 +4,25 @@ import {
   DividerWithText,
   icons,
   layouts,
+  screens,
   SocialMediaButton,
 } from "../components";
+import { useApp } from "../contexts/AppContext";
 import LetsIn from "../assets/lets-in.svg";
 
 function Auth() {
+  const app = useApp();
   const navigate = useNavigate();
+
   const handleSignInPassword = () => {
     navigate("/signIn");
   };
+
+  const logUser = () => {
+    app.logUser();
+  };
+
+  if (app.isFirstTime) return <screens.OnboardingScreen />;
 
   return (
     <div className="flex h-screen justify-center py-6">
@@ -25,19 +35,19 @@ function Auth() {
           Let&apos;s you in
         </h1>
         <div className="flex w-full flex-col items-center gap-3 px-6">
-          <SocialMediaButton>
+          <SocialMediaButton submitHandler={logUser}>
             <icons.Facebook />
             <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
               Continue with Facebook
             </span>
           </SocialMediaButton>
-          <SocialMediaButton>
+          <SocialMediaButton submitHandler={logUser}>
             <icons.Google />
             <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
               Continue with Google
             </span>
           </SocialMediaButton>
-          <SocialMediaButton>
+          <SocialMediaButton submitHandler={logUser}>
             <icons.Apple />
             <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
               Continue with Apple

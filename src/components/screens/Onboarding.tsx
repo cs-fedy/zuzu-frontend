@@ -1,12 +1,11 @@
-import { useNavigate } from "react-router-dom";
-
+import { useApp } from "../../contexts/AppContext";
 import OnboardingOne from "../../assets/Onboarding-one.svg";
 import OnboardingTwo from "../../assets/Onboarding-two.svg";
 import OnboardingThree from "../../assets/Onboarding-three.svg";
 import OnboardingSteps from "../OnboardingSteps";
 
 function OnboardingScreen() {
-  const navigate = useNavigate();
+  const app = useApp();
 
   const steps = [
     {
@@ -26,7 +25,10 @@ function OnboardingScreen() {
     },
   ];
 
-  const finalStepHandler = () => navigate("/auth");
+  const finalStepHandler = () => {
+    app.setNotFirstTime();
+  };
+
   return <OnboardingSteps steps={steps} handleFinalStep={finalStepHandler} />;
 }
 

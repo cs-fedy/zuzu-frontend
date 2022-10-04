@@ -1,26 +1,35 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
-import AppProvider from "./contexts/AppContext";
+import { Routes, HashRouter, Route } from "react-router-dom";
+import AppProvider, { useApp } from "./contexts/AppContext";
 import { Auth, Home, ResetPassword, SignIn, SignUp } from "./pages";
+import { LoggedUserRoute, NotLoggedUserRoute, screens } from "./components";
 
 function App() {
+  const app = useApp();
   return (
-    <AppProvider>
+    <>
+      {app.isLoading && <screens.LoadingScreen />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/signIn" element={<SignIn />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route element={<LoggedUserRoute />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route element={<NotLoggedUserRoute />}>
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
+        </Route>
       </Routes>
-    </AppProvider>
+    </>
   );
 }
 
 function WrappedApp() {
   return (
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <AppProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </AppProvider>
   );
 }
 

@@ -12,6 +12,8 @@ import Chip from "./Chip";
 import DatePicker from "./DatePicker";
 import CountrySelector from "./CountrySelector";
 
+export * from "./CustomRoute";
+
 export {
   icons,
   screens,

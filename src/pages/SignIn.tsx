@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Button,
   DividerWithText,
@@ -7,11 +7,13 @@ import {
   layouts,
   SocialMediaButton,
 } from "../components";
+import { useApp } from "../contexts/AppContext";
 
 function SignIn() {
-  const navigate = useNavigate();
-  const handleSignIn = () => {
-    navigate("/");
+  const app = useApp();
+
+  const logUser = () => {
+    app.logUser();
   };
 
   return (
@@ -53,7 +55,7 @@ function SignIn() {
             // the button should be disabled if the user didn't provide
             // valid input. I disable it for testing purposes.
             // isDisabled
-            handleNextStep={handleSignIn}
+            handleNextStep={logUser}
           >
             Sign in
           </Button>
@@ -67,13 +69,13 @@ function SignIn() {
         <div className="flex w-full flex-col items-center gap-5 px-6">
           <DividerWithText>or continue with</DividerWithText>
           <div className="flex w-full items-center gap-3 px-6">
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={logUser}>
               <icons.Facebook />
             </SocialMediaButton>
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={logUser}>
               <icons.Google />
             </SocialMediaButton>
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={logUser}>
               <icons.Apple />
             </SocialMediaButton>
           </div>

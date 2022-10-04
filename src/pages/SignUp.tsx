@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Button,
   DividerWithText,
@@ -7,11 +7,13 @@ import {
   layouts,
   SocialMediaButton,
 } from "../components";
+import { useApp } from "../contexts/AppContext";
 
 function SignUp() {
-  const navigate = useNavigate();
+  const app = useApp();
+
   const handleSignUp = () => {
-    navigate("/");
+    app.logUser();
   };
 
   return (
@@ -61,13 +63,13 @@ function SignUp() {
         <div className="flex w-full flex-col items-center gap-5 px-6">
           <DividerWithText>or continue with</DividerWithText>
           <div className="flex w-full items-center gap-3 px-6">
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={handleSignUp}>
               <icons.Facebook />
             </SocialMediaButton>
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={handleSignUp}>
               <icons.Google />
             </SocialMediaButton>
-            <SocialMediaButton>
+            <SocialMediaButton submitHandler={handleSignUp}>
               <icons.Apple />
             </SocialMediaButton>
           </div>

@@ -12,7 +12,7 @@
 
 ## About
 
-I found a UI Kit in figma community that belongs to [Figma-ui4free](https://figmaui4free.com) and I decided to implement it using react, tailwindcss, and typescript. This UI kit (Zuzu) came with unique style and niche, that can be easily edited and customized. [Zuzu - Short Video & Social Media App UI Kit on figma](https://www.figma.com/community/file/1154400982888104016).
+I found a UI Kit in figma community that belongs to [Figma-ui4free](https://figmaui4free.com) and I decided to implement it using react, tailwindcss, and typescript. I want later to make this App functional by adding linking it to an API.. This UI kit (Zuzu) came with unique style and niche, that can be easily edited and customized. [Zuzu - Short Video & Social Media App UI Kit on figma](https://www.figma.com/community/file/1154400982888104016).
 
 ## Getting started
 
