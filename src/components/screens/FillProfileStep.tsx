@@ -1,26 +1,11 @@
-import StepLayout from "../layouts/Step";
 import ProfilePicture from "../../assets/profile-picture.png";
 import { Edit, CurvedEmail, Location } from "../icons";
 import { InputLayout } from "../layouts";
 import CountrySelector from "../CountrySelector";
 
-type TFillProfilesProps = {
-  handleNextStep: () => void;
-};
-
-function FillProfileStep({ handleNextStep }: TFillProfilesProps) {
-  const handleSubmit = () => {
-    // do special thing related to this step
-    handleNextStep();
-  };
-
+function FillProfileStep() {
   return (
-    <StepLayout
-      title="Fill Your Profile"
-      nextStepHandler={handleSubmit}
-      canSkip
-      skipHandler={handleNextStep}
-    >
+    <>
       <div className="flex w-full justify-center">
         <div className="relative h-36 w-36">
           <div className="h-full w-full overflow-hidden rounded-full">
@@ -82,7 +67,7 @@ function FillProfileStep({ handleNextStep }: TFillProfilesProps) {
           <Location />
         </InputLayout>
       </div>
-    </StepLayout>
+    </>
   );
 }
 

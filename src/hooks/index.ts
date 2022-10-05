@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
 import useOnboarding from "./useOnboarding";
+import useSteps from "./useSteps";
 
-export { useOnboarding };
+export { useOnboarding, useSteps };

@@ -2,11 +2,7 @@ import { useState } from "react";
 import Chip from "../Chip";
 import StepLayout from "../layouts/Step";
 
-type TInterestStepProps = {
-  handleNextStep: () => void;
-};
-
-function InterestStep({ handleNextStep }: TInterestStepProps) {
+function InterestStep() {
   const [interests, setInterests] = useState([
     { label: "entertainment", selected: true },
     { label: "gamin", selected: false },
@@ -28,11 +24,6 @@ function InterestStep({ handleNextStep }: TInterestStepProps) {
     { label: "culture", selected: false },
   ]);
 
-  const handleSubmit = () => {
-    // do special thing related to this step
-    handleNextStep();
-  };
-
   const handleChipToggle = (label: string) => {
     setInterests((prev) => {
       return prev.map((chip) => {
@@ -43,12 +34,7 @@ function InterestStep({ handleNextStep }: TInterestStepProps) {
   };
 
   return (
-    <StepLayout
-      title="Choose Your Interest"
-      nextStepHandler={handleSubmit}
-      canSkip
-      skipHandler={handleNextStep}
-    >
+    <>
       <p className=" px-6 text-lg font-medium leading-normal tracking-wider">
         Choose your interests and get the best video recommendations.
       </p>
@@ -62,7 +48,7 @@ function InterestStep({ handleNextStep }: TInterestStepProps) {
           />
         ))}
       </div>
-    </StepLayout>
+    </>
   );
 }
 

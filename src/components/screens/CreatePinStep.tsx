@@ -1,22 +1,8 @@
 import { InputLayout } from "../layouts";
-import StepLayout from "../layouts/Step";
 
-type TCreatePinStepProps = {
-  handleNextStep: () => void;
-};
-
-function CreatePinStep({ handleNextStep }: TCreatePinStepProps) {
-  const handleSubmit = () => {
-    // do special thing related to this step
-    handleNextStep();
-  };
-
+function CreatePinStep() {
   return (
-    <StepLayout
-      title="Create New PIN"
-      nextStepHandler={handleSubmit}
-      skipHandler={handleNextStep}
-    >
+    <>
       <p className="px-6 text-center text-lg font-medium leading-normal tracking-wider">
         Add a PIN number to make your account more secure.
       </p>
@@ -54,7 +40,7 @@ function CreatePinStep({ handleNextStep }: TCreatePinStepProps) {
           />
         </InputLayout>
       </div>
-    </StepLayout>
+    </>
   );
 }
 

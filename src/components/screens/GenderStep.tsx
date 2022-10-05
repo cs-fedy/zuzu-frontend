@@ -1,23 +1,8 @@
 import { Female, Male } from "../icons";
-import StepLayout from "../layouts/Step";
 
-type TGenderStepProps = {
-  handleNextStep: () => void;
-};
-
-function GenderStep({ handleNextStep }: TGenderStepProps) {
-  const handleSubmit = () => {
-    // do special thing related to this step
-    handleNextStep();
-  };
-
+function GenderStep() {
   return (
-    <StepLayout
-      title="Tell Us About Yourself"
-      nextStepHandler={handleSubmit}
-      canSkip
-      skipHandler={handleNextStep}
-    >
+    <>
       <p className="px-6 text-lg font-medium leading-normal tracking-wider">
         Choose your identity & help us to find accurate content for you.
       </p>
@@ -35,7 +20,7 @@ function GenderStep({ handleNextStep }: TGenderStepProps) {
           </span>
         </div>
       </div>
-    </StepLayout>
+    </>
   );
 }
 
