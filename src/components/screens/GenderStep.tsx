@@ -3,7 +3,7 @@ import { Female, Male } from "../icons";
 function GenderStep() {
   return (
     <>
-      <p className="px-6 text-lg font-medium leading-normal tracking-wider">
+      <p className="text-lg font-medium leading-normal tracking-wider">
         Choose your identity & help us to find accurate content for you.
       </p>
       <div className="flex w-full flex-col items-center gap-9">

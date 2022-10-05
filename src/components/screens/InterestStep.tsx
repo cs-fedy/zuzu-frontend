@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Chip from "../Chip";
-import StepLayout from "../layouts/Step";
 
 function InterestStep() {
   const [interests, setInterests] = useState([
@@ -35,10 +34,10 @@ function InterestStep() {
 
   return (
     <>
-      <p className=" px-6 text-lg font-medium leading-normal tracking-wider">
+      <p className="text-lg font-medium leading-normal tracking-wider">
         Choose your interests and get the best video recommendations.
       </p>
-      <div className="flex flex-wrap gap-1 px-6">
+      <div className="flex flex-wrap gap-1">
         {interests.map((interest) => (
           <Chip
             key={interest.label}

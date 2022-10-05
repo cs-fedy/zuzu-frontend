@@ -16,7 +16,7 @@ function BirthdayStep() {
 
   return (
     <>
-      <p className="px-6 text-lg font-medium leading-normal tracking-wider">
+      <p className="text-lg font-medium leading-normal tracking-wider">
         Your birthday will not be shown to the public.
       </p>
       <div className="mx-28">

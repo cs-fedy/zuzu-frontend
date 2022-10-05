@@ -19,16 +19,14 @@ function StepLayout({
   skipHandler = () => {},
 }: TStepLayoutProps) {
   return (
-    <div className="flex h-screen justify-center py-6">
-      <div className="flex w-full flex-col items-center justify-between">
-        <BackBarLayout>{title}</BackBarLayout>
-        <div className="mx-6 flex w-full flex-col gap-6 py-6">{children}</div>
-        <div className="flex w-full items-center justify-between gap-3 px-6">
-          {canSkip && (
-            <SecondaryButton handleNextStep={skipHandler}>skip</SecondaryButton>
-          )}
-          <Button handleNextStep={nextStepHandler}>continue</Button>
-        </div>
+    <div className="flex h-screen w-full flex-col items-center justify-between px-6 pt-6 pb-12">
+      <BackBarLayout>{title}</BackBarLayout>
+      <div className="flex w-full flex-col gap-6 py-6">{children}</div>
+      <div className="flex w-full items-center justify-between gap-3">
+        {canSkip && (
+          <SecondaryButton handleNextStep={skipHandler}>skip</SecondaryButton>
+        )}
+        <Button handleNextStep={nextStepHandler}>continue</Button>
       </div>
     </div>
   );

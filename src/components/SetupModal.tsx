@@ -10,7 +10,7 @@ function SetupModal({ isModalOpen }: TSetupModalProps) {
     <div
       className={`${
         isModalOpen ? "fixed" : "hidden"
-      } inset-0 h-full w-full bg-black bg-opacity-80`}
+      } inset-0 z-10 h-full w-full bg-black bg-opacity-80`}
     >
       <div className="flex h-full w-full items-center justify-center">
         <div className="mx-11 flex flex-col items-center gap-4  rounded-3xl bg-white px-8 pb-8 pt-11">

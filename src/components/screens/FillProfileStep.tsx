@@ -17,7 +17,7 @@ function FillProfileStep() {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center gap-5 px-6">
+      <div className="flex w-full flex-col items-center gap-5">
         <InputLayout>
           <input
             type="text"

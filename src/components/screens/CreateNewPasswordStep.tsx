@@ -9,7 +9,7 @@ function CreateNewPassword() {
       <div className="mx-12">
         <img src={CreateNewPasswordIllustration} alt="create new password" />
       </div>
-      <div className="flex w-full flex-col items-center gap-5 px-6">
+      <div className="flex w-full flex-col items-center gap-5">
         <p className="flex w-full justify-start text-lg font-medium leading-normal tracking-wider">
           Create Your New Password
         </p>

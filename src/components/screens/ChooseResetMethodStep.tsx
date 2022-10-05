@@ -10,10 +10,10 @@ function ChooseResetMethod() {
           alt="reset password illustration"
         />
       </div>
-      <p className="px-6 text-lg font-medium leading-normal tracking-wider">
+      <p className="text-lg font-medium leading-normal tracking-wider">
         Select which contact details should we use to reset your password
       </p>
-      <div className="flex w-full justify-center px-6">
+      <div className="flex w-full justify-center">
         <div className="flex w-full items-center gap-4 rounded-full border-4 border-primary-500 px-4 py-4">
           <div className="flex h-20 w-20 items-center justify-center rounded-full bg-red bg-opacity-10">
             <GradientSMS />
@@ -28,7 +28,7 @@ function ChooseResetMethod() {
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-center px-6">
+      <div className="flex w-full justify-center">
         <div className="flex w-full items-center gap-4 rounded-full border border-gray-200 px-4 py-4">
           <div className="flex h-20 w-20 items-center justify-center rounded-full bg-red bg-opacity-10">
             <GradientEmail />

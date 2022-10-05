@@ -3,10 +3,10 @@ import { InputLayout } from "../layouts";
 function CreatePinStep() {
   return (
     <>
-      <p className="px-6 text-center text-lg font-medium leading-normal tracking-wider">
+      <p className="text-center text-lg font-medium leading-normal tracking-wider">
         Add a PIN number to make your account more secure.
       </p>
-      <div className="flex w-full items-center gap-2 px-6">
+      <div className="flex w-full items-center gap-2">
         <InputLayout>
           <input
             type="password"
