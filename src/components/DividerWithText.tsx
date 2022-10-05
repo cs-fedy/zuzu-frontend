@@ -6,7 +6,7 @@ type TDividerWithTextProps = {
 
 function DividerWithText({ children }: TDividerWithTextProps) {
   return (
-    <div className="relative flex w-full items-center py-2">
+    <div className="flex w-full items-center gap-4 p-3">
       <div className="flex-grow border-t border-gray-600/30" />
       <span className="mx-4 flex-shrink text-lg font-semi-bold leading-normal tracking-wider">
         {children}

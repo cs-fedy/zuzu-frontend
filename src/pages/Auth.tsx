@@ -25,34 +25,32 @@ function Auth() {
   if (app.isFirstTime) return <screens.OnboardingScreen />;
 
   return (
-    <div className="flex h-screen justify-center py-6">
-      <div className="flex w-full flex-col items-center justify-between">
+    <div className="flex justify-center px-6 pt-6 pb-12">
+      <div className="flex w-full flex-col items-center justify-between gap-8">
         <layouts.BackBarLayout />
-        <div className="mx-20">
-          <img src={LetsIn} alt="lets in" />
-        </div>
-        <h1 className="mx-6 text-center text-5xl font-bold">
-          Let&apos;s you in
-        </h1>
-        <div className="flex w-full flex-col items-center gap-3 px-6">
-          <SocialMediaButton submitHandler={logUser}>
-            <icons.Facebook />
-            <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
-              Continue with Facebook
-            </span>
-          </SocialMediaButton>
-          <SocialMediaButton submitHandler={logUser}>
-            <icons.Google />
-            <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
-              Continue with Google
-            </span>
-          </SocialMediaButton>
-          <SocialMediaButton submitHandler={logUser}>
-            <icons.Apple />
-            <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
-              Continue with Apple
-            </span>
-          </SocialMediaButton>
+        <img src={LetsIn} alt="lets in" />
+        <h1 className="text-center text-5xl font-bold">Let&apos;s you in</h1>
+        <div className="flex w-full flex-col items-center gap-6">
+          <div className="flex w-full flex-col gap-4">
+            <SocialMediaButton submitHandler={logUser}>
+              <icons.Facebook />
+              <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
+                Continue with Facebook
+              </span>
+            </SocialMediaButton>
+            <SocialMediaButton submitHandler={logUser}>
+              <icons.Google />
+              <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
+                Continue with Google
+              </span>
+            </SocialMediaButton>
+            <SocialMediaButton submitHandler={logUser}>
+              <icons.Apple />
+              <span className="text-base font-semi-bold leading-normal tracking-wider text-gray-900">
+                Continue with Apple
+              </span>
+            </SocialMediaButton>
+          </div>
           <DividerWithText>or</DividerWithText>
           <Button handleNextStep={handleSignInPassword}>
             Sign in with password
