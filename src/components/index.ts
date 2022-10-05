@@ -10,6 +10,8 @@ import SecondaryButton from "./SecondaryButton";
 import Chip from "./Chip";
 import DatePicker from "./DatePicker";
 import CountrySelector from "./CountrySelector";
+import PasswordInput from "./PasswordInput";
+import EmailInput from "./EmailInput";
 
 export * from "./CustomRoute";
 
@@ -26,4 +28,6 @@ export {
   Chip,
   DatePicker,
   CountrySelector,
+  PasswordInput,
+  EmailInput,
 };
