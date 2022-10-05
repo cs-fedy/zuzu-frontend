@@ -1,7 +1,6 @@
 import * as icons from "./icons";
 import * as screens from "./screens";
 import * as layouts from "./layouts";
-import OnboardingSteps from "./OnboardingSteps";
 import OnboardingStep from "./OnboardingStep";
 import SocialMediaButton from "./SocialMediaButton";
 import Button from "./Button";
@@ -18,7 +17,6 @@ export {
   icons,
   screens,
   layouts,
-  OnboardingSteps,
   OnboardingStep,
   SocialMediaButton,
   Button,
