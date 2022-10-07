@@ -21,7 +21,7 @@ export type AppContextState = {
 const contextInitialState: AppContextState = {
   isLoading: false,
   isFirstTime: true,
-  isUserLoggedIn: false,
+  isUserLoggedIn: true,
   isUserProfileComplete: true,
   setNotFirstTime: () => {},
   completeAccount: () => {},
@@ -48,8 +48,8 @@ type AppProviderProps = {
 function AppProvider({ children }: AppProviderProps): ReturnType<FC> {
   const [isLoading, setIsLoading] = useState(false);
   const [isFirstTime, setIsFirstTime] = useState(() => checkIsFirstTime());
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-  const [isUserProfileComplete, setIsUserProfileComplete] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
+  const [isUserProfileComplete, setIsUserProfileComplete] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);

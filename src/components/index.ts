@@ -13,6 +13,8 @@ import CountrySelector from "./CountrySelector";
 import PasswordInput from "./PasswordInput";
 import EmailInput from "./EmailInput";
 import SetupModal from "./SetupModal";
+import BottomBar from "./BottomBar";
+import TopBar from "./TopBar";
 
 export {
   icons,
@@ -30,4 +32,6 @@ export {
   PasswordInput,
   EmailInput,
   SetupModal,
+  BottomBar,
+  TopBar,
 };

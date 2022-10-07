@@ -19,7 +19,7 @@ function StepLayout({
   skipHandler = () => {},
 }: TStepLayoutProps) {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-between px-6 pt-6 pb-12">
+    <div className="flex h-screen w-full flex-col items-center justify-between gap-12 px-6 py-8">
       <BackBarLayout>{title}</BackBarLayout>
       <div className="flex w-full flex-col gap-6 py-6">{children}</div>
       <div className="flex w-full items-center justify-between gap-3">

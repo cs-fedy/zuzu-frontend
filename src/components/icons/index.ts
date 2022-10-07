@@ -16,6 +16,19 @@ import DownChevron from "./DownChevron";
 import Location from "./Location";
 import GradientSMS from "./GradientSMS";
 import GradientEmail from "./GradientEmail";
+import Home from "./Home";
+import Discover from "./Discover";
+import Plus from "./Plus";
+import Inbox from "./Inbox";
+import Profile from "./Profile";
+import Live from "./Live";
+import Search from "./Search";
+import Share from "./Share";
+import Save from "./Save";
+import Chat from "./Chat";
+import Heart from "./Heart";
+import Flag from "./Flag";
+import Music from "./Music";
 
 export {
   Logo,
@@ -36,4 +49,17 @@ export {
   Location,
   GradientSMS,
   GradientEmail,
+  Home,
+  Discover,
+  Plus,
+  Inbox,
+  Profile,
+  Live,
+  Search,
+  Share,
+  Save,
+  Chat,
+  Heart,
+  Flag,
+  Music,
 };

@@ -34,7 +34,7 @@ function InterestStep() {
 
   return (
     <>
-      <p className="text-lg font-medium leading-normal tracking-wider">
+      <p className="flex-grow-0 text-lg font-medium leading-normal tracking-wider">
         Choose your interests and get the best video recommendations.
       </p>
       <div className="flex flex-wrap gap-1">
