@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Chat, Flag, Heart, Music, Save, Share } from "../icons";
 import ReelAction from "../ReelAction";
 import ReelThumbnail from "../../assets/reel-thumbnail.png";
@@ -7,19 +6,19 @@ import MusicAvatar from "../../assets/music-avatar.png";
 import TopBar from "../TopBar";
 import ShareReel from "./ShareReel";
 import ChatReel from "./ChatReel";
+import { useStack } from "../../contexts/StackContext";
 
 function Reel() {
-  const [isShareScreenOpen, setIsShareScreenOpen] = useState(false);
-  const [isChatScreenOpen, setIsChatScreenOpen] = useState(false);
+  const stack = useStack();
 
   const handleShareReel = () => {
-    setIsShareScreenOpen(!isShareScreenOpen);
+    stack.push(<ShareReel handleClose={() => stack.pop()} />);
   };
 
   const handleSaveReel = () => {};
 
   const openReelChat = () => {
-    setIsChatScreenOpen(!isChatScreenOpen);
+    stack.push(<ChatReel handleClose={() => stack.pop()} />);
   };
 
   const toggleReelLike = () => {};
@@ -90,8 +89,6 @@ function Reel() {
           </div>
         </div>
       </div>
-      {isShareScreenOpen && <ShareReel handleClose={handleShareReel} />}
-      {isChatScreenOpen && <ChatReel handleClose={handleShareReel} />}
     </div>
   );
 }

@@ -8,7 +8,7 @@ import {
   useState,
 } from "react";
 
-export type AppContextState = {
+type AppContextState = {
   isUserLoggedIn: boolean;
   isFirstTime: boolean;
   isUserProfileComplete: boolean;

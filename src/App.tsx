@@ -9,26 +9,29 @@ import {
   SignUp,
   CompleteProfile,
 } from "./pages";
+import StackProvider from "./contexts/StackContext";
 
 function App() {
   return (
     <AppProvider>
-      <Routes>
-        <Route element={<routes.LoggedUserRoute />}>
-          <Route element={<routes.ProfileCompleted />}>
-            <Route path="/" element={<Home />} />
+      <StackProvider>
+        <Routes>
+          <Route element={<routes.LoggedUserRoute />}>
+            <Route element={<routes.ProfileCompleted />}>
+              <Route path="/" element={<Home />} />
+            </Route>
+            <Route element={<routes.ProfileNotCompleted />}>
+              <Route path="/completeProfile" element={<CompleteProfile />} />
+            </Route>
           </Route>
-          <Route element={<routes.ProfileNotCompleted />}>
-            <Route path="/completeProfile" element={<CompleteProfile />} />
+          <Route element={<routes.NotLoggedUserRoute />}>
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/signIn" element={<SignIn />} />
+            <Route path="/signUp" element={<SignUp />} />
+            <Route path="/resetPassword" element={<ResetPassword />} />
           </Route>
-        </Route>
-        <Route element={<routes.NotLoggedUserRoute />}>
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/signIn" element={<SignIn />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/resetPassword" element={<ResetPassword />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </StackProvider>
     </AppProvider>
   );
 }
