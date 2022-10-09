@@ -2,7 +2,7 @@ import { Discover, Home, Inbox, Plus, Profile } from "./icons";
 
 function BottomBar() {
   return (
-    <div className="fixed bottom-0 right-0 left-0 bg-dark-1 bg-opacity-90 py-2">
+    <div className="w-full bg-dark-1 bg-opacity-90 py-2">
       <div className="flex items-center justify-between gap-5 px-8">
         <div className="flex flex-col items-center py-2">
           <Home color="fill-primary-500" />

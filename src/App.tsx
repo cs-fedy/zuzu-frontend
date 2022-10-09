@@ -1,6 +1,6 @@
 import { Routes, HashRouter, Route } from "react-router-dom";
-import AppProvider, { useApp } from "./contexts/AppContext";
-import { screens, routes } from "./components";
+import AppProvider from "./contexts/AppContext";
+import { routes } from "./components";
 import {
   Auth,
   Home,
@@ -11,10 +11,8 @@ import {
 } from "./pages";
 
 function App() {
-  const app = useApp();
   return (
-    <>
-      {app.isLoading && <screens.LoadingScreen />}
+    <AppProvider>
       <Routes>
         <Route element={<routes.LoggedUserRoute />}>
           <Route element={<routes.ProfileCompleted />}>
@@ -31,17 +29,15 @@ function App() {
           <Route path="/resetPassword" element={<ResetPassword />} />
         </Route>
       </Routes>
-    </>
+    </AppProvider>
   );
 }
 
 function WrappedApp() {
   return (
-    <AppProvider>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </AppProvider>
+    <HashRouter>
+      <App />
+    </HashRouter>
   );
 }
 

@@ -29,6 +29,21 @@ import Chat from "./Chat";
 import Heart from "./Heart";
 import Flag from "./Flag";
 import Music from "./Music";
+import Swap from "./Swap";
+import OutlineFlag from "./OutlineFlag";
+import OutlineBrokenHeart from "./OutlineBrokenHeart";
+import OutlineDownload from "./OutlineDownload";
+import OutlineVideo from "./OutlineVideo";
+import OutlineUsers from "./OutlineUsers";
+import OutlinePaperPlus from "./OutlinePaperPlus";
+import OutlineSave from "./OutlineSave";
+import OutlineGIF from "./OutlineGIF";
+import More from "./More";
+import Send from "./Send";
+import User from "./User";
+import At from "./At";
+import Gift from "./Gift";
+import HappyFace from "./HappyFace";
 
 export {
   Logo,
@@ -62,4 +77,19 @@ export {
   Heart,
   Flag,
   Music,
+  Swap,
+  OutlineFlag,
+  OutlineBrokenHeart,
+  OutlineDownload,
+  OutlineVideo,
+  OutlineUsers,
+  OutlinePaperPlus,
+  OutlineSave,
+  OutlineGIF,
+  More,
+  Send,
+  User,
+  At,
+  Gift,
+  HappyFace,
 };

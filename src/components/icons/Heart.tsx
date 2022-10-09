@@ -1,6 +1,10 @@
-function Heart() {
+type THeartProps = {
+  className?: string;
+};
+
+function Heart({ className = "fill-white" }: THeartProps) {
   return (
-    <svg width="36" height="36" viewBox="0 0 36 36" className="fill-white">
+    <svg width="36" height="36" viewBox="0 0 36 36" className={className}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

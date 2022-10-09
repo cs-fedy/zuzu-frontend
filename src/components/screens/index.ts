@@ -1,4 +1,3 @@
-import LoadingScreen from "./Loading";
 import OnboardingScreen from "./Onboarding";
 import GenderStep from "./GenderStep";
 import BirthdayStep from "./BirthdayStep";
@@ -9,9 +8,11 @@ import ChooseResetMethodStep from "./ChooseResetMethodStep";
 import ConfirmationCodeStep from "./ConfirmationCodeStep";
 import CreateNewPasswordStep from "./CreateNewPasswordStep";
 import InterestStep from "./InterestStep";
+import Reel from "./Reel";
+import ShareReel from "./ShareReel";
+import ChatReel from "./ChatReel";
 
 export {
-  LoadingScreen,
   OnboardingScreen,
   GenderStep,
   BirthdayStep,
@@ -22,4 +23,7 @@ export {
   ConfirmationCodeStep,
   CreateNewPasswordStep,
   InterestStep,
+  Reel,
+  ShareReel,
+  ChatReel,
 };

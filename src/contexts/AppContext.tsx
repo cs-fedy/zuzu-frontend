@@ -9,7 +9,6 @@ import {
 } from "react";
 
 export type AppContextState = {
-  isLoading: boolean;
   isUserLoggedIn: boolean;
   isFirstTime: boolean;
   isUserProfileComplete: boolean;
@@ -19,7 +18,6 @@ export type AppContextState = {
 };
 
 const contextInitialState: AppContextState = {
-  isLoading: false,
   isFirstTime: true,
   isUserLoggedIn: true,
   isUserProfileComplete: true,
@@ -46,15 +44,9 @@ type AppProviderProps = {
 };
 
 function AppProvider({ children }: AppProviderProps): ReturnType<FC> {
-  const [isLoading, setIsLoading] = useState(false);
   const [isFirstTime, setIsFirstTime] = useState(() => checkIsFirstTime());
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
   const [isUserProfileComplete, setIsUserProfileComplete] = useState(true);
-
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 2000);
-  }, []);
 
   useEffect(() => {
     backupFirstTimeState(isFirstTime);
@@ -73,7 +65,6 @@ function AppProvider({ children }: AppProviderProps): ReturnType<FC> {
   };
 
   const value = {
-    isLoading,
     isFirstTime,
     isUserLoggedIn,
     isUserProfileComplete,

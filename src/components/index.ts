@@ -15,6 +15,9 @@ import EmailInput from "./EmailInput";
 import SetupModal from "./SetupModal";
 import BottomBar from "./BottomBar";
 import TopBar from "./TopBar";
+import ReelAction from "./ReelAction";
+import Comment from "./Comment";
+import PostComment from "./PostComment";
 
 export {
   icons,
@@ -34,4 +37,7 @@ export {
   SetupModal,
   BottomBar,
   TopBar,
+  ReelAction,
+  Comment,
+  PostComment,
 };
