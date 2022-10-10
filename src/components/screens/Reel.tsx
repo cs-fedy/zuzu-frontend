@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Chat, Flag, Heart, Music, Save, Share } from "../icons";
 import ReelAction from "../ReelAction";
 import ReelThumbnail from "../../assets/reel-thumbnail.png";
@@ -7,8 +8,11 @@ import TopBar from "../TopBar";
 import ShareReel from "./ShareReel";
 import ChatReel from "./ChatReel";
 import { useStack } from "../../contexts/StackContext";
+import ReportReel from "./ReportReel";
 
 function Reel() {
+  const [isLiked, setIsLiked] = useState(false);
+
   const stack = useStack();
 
   const handleShareReel = () => {
@@ -21,8 +25,13 @@ function Reel() {
     stack.push(<ChatReel handleClose={() => stack.pop()} />);
   };
 
-  const toggleReelLike = () => {};
-  const reportReel = () => {};
+  const toggleReelLike = () => {
+    setIsLiked((prev) => !prev);
+  };
+
+  const reportReel = () => {
+    stack.push(<ReportReel handleClose={() => stack.pop()} />);
+  };
 
   return (
     <div className="relative h-screen w-full">
@@ -81,7 +90,11 @@ function Reel() {
             />
             <ReelAction icon={<Chat />} content="24.8k" action={openReelChat} />
             <ReelAction
-              icon={<Heart />}
+              icon={
+                <Heart
+                  className={isLiked ? "fill-primary-500" : "fill-white"}
+                />
+              }
               content="225.9k"
               action={toggleReelLike}
             />

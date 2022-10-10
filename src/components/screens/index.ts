@@ -11,6 +11,7 @@ import InterestStep from "./InterestStep";
 import Reel from "./Reel";
 import ShareReel from "./ShareReel";
 import ChatReel from "./ChatReel";
+import ReportReel from "./ReportReel";
 
 export {
   OnboardingScreen,
@@ -26,4 +27,5 @@ export {
   Reel,
   ShareReel,
   ChatReel,
+  ReportReel,
 };
